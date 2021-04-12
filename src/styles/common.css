@@ -1,0 +1,367 @@
+:root {
+  --jiucai-green: #119267;
+}
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background-color: var(--jiucai-green);
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.style_red {
+  color: var(--jiucai-green);
+}
+
+/* 快捷导航栏 */
+
+.shortcut {
+  height: 35px;
+  line-height: 35px;
+  background-color: #f1f1f1;
+}
+
+.shortcut ul li {
+  float: left;
+}
+
+/* nth-child(even) 选择所有偶数的li */
+
+.shortcut .fr ul li:nth-child(even) {
+  content: '|';
+  width: 1px;
+  height: 12px;
+  background-color: #666666;
+  margin: 12px 15px 0;
+}
+
+/* 小三角图标 */
+
+.arrow-icon {
+  /* 距离 */
+  margin-left: 6px;
+  /* 字体图标大小 */
+  font-size: 1em;
+}
+
+/* shortcut下面的header，包含logo和搜索框 */
+
+.header {
+  position: relative;
+  height: 100px;
+  /* background-color: pink; */
+}
+
+/* header的分割线 */
+
+.header-line {
+  border-bottom: 1px solid #dfdfdf;
+  /* border: 1px solid #000000; */
+}
+
+/* logo */
+
+.logo {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  width: 200px;
+  height: 60px;
+  /* background-color: blue; */
+}
+
+.logo a {
+  display: block;
+  width: 200px;
+  height: 60px;
+  background: url(/image/jiucai-mall.png) no-repeat;
+  background-size: contain;
+  /* h1的文字隐藏 */
+  font-size: 0;
+}
+
+/* 搜索box */
+
+.search {
+  position: absolute;
+  left: 340px;
+  top: 30px;
+  width: 550px;
+  height: 40px;
+  border: 2px solid var(--jiucai-green);
+}
+
+.search input {
+  float: left;
+  width: 455px;
+  height: 36px;
+  padding-left: 10px;
+}
+
+.search button {
+  float: left;
+  width: 91px;
+  margin-top: -1px;
+  height: 38px;
+  background-color: var(--jiucai-green);
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.search-icon {
+  /* 距离 */
+  /* margin-left: 5px; */
+  /* 字体图标大小 */
+  font-size: 1em;
+  /* 图标与右边的字体距离 */
+  padding-right: 10px;
+}
+
+/* 购物车 */
+
+.cart {
+  position: absolute;
+  right: 60px;
+  top: 30px;
+  width: 150px;
+  height: 40px;
+  /* box中的文字居中 */
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid #dfdfdf;
+  background-color: #f7f7f7;
+}
+
+.cart:hover {
+  border-color: var(--jiucai-green);
+  cursor: pointer;
+}
+
+.cart-icon {
+  /* 距离 */
+  margin-left: 5px;
+  /* 字体图标大小 */
+  font-size: 1.5em;
+  /* 图标与右边的字体距离 */
+  padding-right: 5px;
+  color: var(--jiucai-green);
+}
+
+.cart-icon-right {
+  /* 距离 */
+  margin-left: 5px;
+  /* 字体图标大小 */
+  font-size: 1.2em;
+  /* 图标与右边的字体距离 */
+  padding-right: 5px;
+  /* color: var(--jiucai-green); */
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  left: 105px;
+  height: 14px;
+  line-height: 14px;
+  color: #fff;
+  background-color: #ff5722;
+  padding: 0 5px;
+  border-radius: 7px 7px 7px 0;
+}
+
+/* ******** */
+
+/* 底部模块 */
+
+/* ******** */
+
+.footer {
+  height: 420px;
+  background-color: white;
+  padding-top: 30px;
+}
+
+.footer-simple {
+  height: 130px;
+  background-color: white;
+  padding-top: 30px;
+}
+
+/* 服务模块 */
+
+.mod-service {
+  height: 80px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.mod-service ul li {
+  float: left;
+  width: 300px;
+  height: 50px;
+  padding-left: 35px;
+  /* background-color: pink; */
+}
+
+.mod-service ul li em {
+  display: inline-block;
+  font-size: 4em;
+  color: var(--jiucai-green);
+}
+
+.service-text {
+  display: inline-block;
+  padding-left: 2%;
+  padding-top: 2%;
+}
+
+.service-text h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.service-text p {
+  font-size: 12px;
+}
+
+/* 帮助模块 */
+
+.mod-help {
+  height: 185px;
+  border-bottom: 1px solid #cccccc;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.mod-help dl {
+  float: left;
+  width: 198px;
+}
+
+.mod-help dl:last-child {
+  width: 100px;
+  text-align: center;
+}
+
+.mod-help dl dt {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.qrcode {
+  width: 100px;
+  height: 100px;
+  background: url(/image/jiucai-qrcode.png) no-repeat;
+  background-size: contain;
+  margin-bottom: 5px;
+  background-color: pink;
+}
+
+/* 版权模块 */
+
+.mod_copyright {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.mod_copyright-line {
+  border-top: 1px solid #cccccc;
+}
+
+.links {
+  padding-bottom: 15px;
+}
+
+.links a {
+  /* color: #666666; */
+  margin: 0 5px;
+}
+
+.copyright {
+  /* padding: 10px 0; */
+  line-height: 22px;
+  color: #999999;
+}
+
+/* logo部分 */
+
+.logo-container {
+  position: relative;
+  display: inline;
+}
+
+/* 垂直分割线 */
+
+.vertical-line {
+  position: absolute;
+  left: 265px;
+  top: 25px;
+  width: 1px;
+  height: 55px;
+  background: #dfdfdf;
+}
+
+.header-line {
+  border-bottom: 1px solid #dfdfdf;
+  /* border: 1px solid #000000; */
+}
+
+/* 会员注册 */
+
+.logo-container h4 {
+  position: absolute;
+  left: 290px;
+  top: 28px;
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  color: #000000;
+  font-weight: 400;
+}
+
+/* 登录链接部分 */
+
+.login-nav {
+  text-align: center;
+  font-size: 16px;
+  float: right;
+  margin-top: 40px;
+  margin-right: 130px;
+  color: #999;
+}
+
+.login-nav a {
+  color: var(--jiucai-green);
+}
+
+.login-nav a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-nav em:first-child {
+  font-size: 1em;
+  margin-left: 2px;
+}
+
+.login-nav em:last-child {
+  font-size: 1.1em;
+  margin-right: 2px;
+}

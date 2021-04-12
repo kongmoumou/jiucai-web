@@ -1,0 +1,88 @@
+/* CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* CSS BOX模型 */
+    box-sizing: border-box;
+}
+
+
+/* em i的斜体文字不倾斜 */
+
+em,
+i {
+    font-style: normal;
+}
+
+
+/* 去除li的小圆点 */
+
+li {
+    list-style: none;
+}
+
+img {
+    /* 清除边框 */
+    border: 0;
+    /* 清除图片低侧存在的空白缝隙 */
+    vertical-align: middle;
+}
+
+button {
+    /* 鼠标边小手 */
+    cursor: pointer;
+}
+
+a {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--jiucai-green);
+}
+
+button,
+input {
+    /* 字体 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 去除把边框 */
+    border: 0;
+    outline: none;
+}
+
+body {
+    /* 字体 */
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    background-color: #ffffff;
+    color: #666666;
+}
+
+.hide,
+.none {
+    display: none;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.w1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
