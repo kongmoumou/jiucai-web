@@ -5,7 +5,7 @@
     <div class="logo-container">
       <div class="logo">
         <h1>
-          <router-link id="header-title" :to="{ name: 'mall' }">
+          <router-link id="header-title" :to="{ name: 'index' }">
             韭菜商城
           </router-link>
         </h1>
