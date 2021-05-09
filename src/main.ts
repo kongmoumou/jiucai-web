@@ -22,6 +22,8 @@ window.$ = $
 
 const app = createApp(App)
 
+app.config.globalProperties.VITE_OSS_URL = import.meta.env.VITE_OSS_URL ?? ''
+
 const routes = setupLayouts(generatedRoutes)
 const router = createRouter({
   history: createWebHistory(),
