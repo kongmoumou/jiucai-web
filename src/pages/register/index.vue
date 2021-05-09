@@ -15,6 +15,9 @@ export default {
       layui.use('form', () => {
         const form = layui.form
 
+        // rerender form
+        form.render()
+
         // 登录表单验证
         form.verify({
         // 用户名验证
