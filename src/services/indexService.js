@@ -145,6 +145,9 @@ export const _index_service = {
   back2top() {
     // 拖动滚动条或滚动鼠标轮
     window.onscroll = function() {
+      if (!document.getElementById('rTop'))
+        return
+
       if (document.body.scrollTop || document.documentElement.scrollTop > 0)
         document.getElementById('rTop').style.display = 'block'
       else
