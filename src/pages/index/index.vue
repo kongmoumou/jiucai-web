@@ -180,22 +180,13 @@ export default {
                   <div :id="`floor-product-box-view-${ String(i) }`" class="layui-tab-content">
                     <!-- 商品栏展示盒子view的渲染模板 -->
                     <!-- 商品展示box，每页最多展示10个，最后一个为浏览更多的同类商品-->
-                    <div v-for="(item, itemI) in data?.items[i]" :key="String(itemI)" :class="['item-show-box','layui-tab-item', itemI === 0 ? 'layui-show' : '']">
+                    <div v-for="(item, itemI) in (data?.items[i] || [[...Array(9)]])" :key="String(itemI)" :class="['item-show-box','layui-tab-item', itemI === 0 ? 'layui-show' : '']">
                       <div class="row">
                         <!-- 小于9个 -->
-                        <div v-for="(p, pI) in item" :key="String(pI)">
-                          <li v-if="Number(pI) < 9" class="brick-item brick-item-m brick-item-m-2">
-                            <a :href="`./product.html?productId=${ p.id }`" target="_blank">
-                              <div class="figure figure-img">
-                                <img width="160" height="160" :alt="p.name" :src="(p.imageHost ?? VITE_OSS_URL) + p.mainImage ">
-                              </div>
-                              <h3 class="title">{{ p.name }}</h3>
-                              <p class="desc">{{ p.subtitle }}</p>
-                              <p class="price"><span class="num">{{ p.price }}</span>&nbsp;元</p>
-                            </a>
-                          </li>
-                          <li v-else class="brick-item brick-item-m brick-item-m-2">
-                            <a class="last-product" :href="`./list.html?categoryId=${p.categoryId }`" target="_blank">
+                        <ProductCard v-for="(p, pI) in item?.slice(0, 9)" :key="String(pI)" :data="p" />
+                        <div v-for="(p, pI) in item?.slice(0, 1)" :key="String(pI)">
+                          <li class="brick-item brick-item-m brick-item-m-2">
+                            <a class="last-product" :href="`./list.html?categoryId=${p?.categoryId }`" target="_blank">
                               <div class="figure figure-img ">
                                 <div class="iconfont  icon-yulan search-more-icon"></div>
                               </div>

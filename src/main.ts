@@ -12,6 +12,11 @@ import '~/styles/iconfont/iconfont.css'
 import '~/styles/base.css'
 import '~/styles/common.css'
 
+// eslint-disable-next-line import/order
+import { ElSkeleton, ElSkeletonItem } from "element-plus";
+import 'element-plus/lib/theme-chalk/el-skeleton.css'
+import 'element-plus/lib/theme-chalk/el-skeleton-item.css'
+
 window.layui.config(
   {
     dir: '/vendors/layui/',
@@ -33,6 +38,10 @@ app.use(router)
 
 const head = createHead()
 app.use(head)
+
+// Element
+app.use(ElSkeleton)
+app.use(ElSkeletonItem)
 
 app.mount('#app')
 
