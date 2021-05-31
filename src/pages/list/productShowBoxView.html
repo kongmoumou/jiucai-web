@@ -1,0 +1,22 @@
+<!-- 商品展示box，每页最多展示10个，最后一个为浏览更多的同类商品-->
+<div class="item-show-box">
+  <div class="row">
+
+      {{# layui.each( d.data.list, function(index, item){ }}
+      <div>
+          <li class="brick-item brick-item-m brick-item-m-2">
+              <a href="./product?productId={{ item.id }}" target="_blank">
+                  <div class="figure figure-img">
+                      <img width="160" height="160" alt="{{ item.name }}" src="{{ (item.imageHost || window.VITE_OSS_URL) + item.mainImage }}">
+                  </div>
+                  <h3 class="title">{{ item.name }}</h3>
+                  <p class="desc">{{ item.subtitle }}</p>
+                  <p class="price"><span class="num">{{ item.price }}</span>元</p>
+              </a>
+          </li>
+      </div>
+      {{# }); }}
+
+  </div>
+
+</div>
