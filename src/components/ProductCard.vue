@@ -21,14 +21,14 @@
     </template>
     <template #default>
       <li class="brick-item brick-item-m brick-item-m-2">
-        <a :href="`./product.html?productId=${ p.id }`" target="_blank">
+        <router-link :to="{name: 'product', query: {productId: p.id}}" target="_blank">
           <div class="figure figure-img">
             <img width="160" height="160" :alt="p.name" :src="(p.imageHost ?? VITE_OSS_URL) + p.mainImage ">
           </div>
           <h3 class="title">{{ p.name }}</h3>
           <p class="desc">{{ p.subtitle }}</p>
           <p class="price"><span class="num">{{ p.price }}</span>&nbsp;元</p>
-        </a>
+        </router-link>
       </li>
     </template>
   </el-skeleton>
