@@ -1,0 +1,6 @@
+<span class="layui-breadcrumb" lay-separator="-" style="visibility: visible;">
+  <a href="/">首页</a>
+{{# layui.each( d.data, function(index, item){ }}
+<a href="./list?categoryId={{ d.data[index].id }}">{{ d.data[index].name }}</a> {{# }); }}
+<a><cite>商品详情</cite></a>
+</span>
