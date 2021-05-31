@@ -1,27 +1,3 @@
-function getRedirectUrl(url) {
-  const request = {
-    index: {
-      name: '主页',
-      url: 'index',
-    },
-    login: {
-      name: '登录页面',
-      url: 'login',
-    },
-  }
-  // 自定义跳转页面
-  if (_common_validate.isEmpty(request[url])) {
-    const link = {
-      name: '原页面',
-      url,
-    }
-    return link
-  }
-  else {
-    return request[url]
-  }
-}
-
 export const _common_validate = {
   // 重新安排一下后端响应码
   validate(response, redirect_path) {
@@ -68,4 +44,28 @@ export const _common_validate = {
   isEmpty(obj) {
     return !obj
   },
+}
+
+function getRedirectUrl(url) {
+  const request = {
+    index: {
+      name: '主页',
+      url: 'index',
+    },
+    login: {
+      name: '登录页面',
+      url: 'login',
+    },
+  }
+  // 自定义跳转页面
+  if (_common_validate.isEmpty(request[url])) {
+    const link = {
+      name: '原页面',
+      url,
+    }
+    return link
+  }
+  else {
+    return request[url]
+  }
 }
