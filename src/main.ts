@@ -13,7 +13,7 @@ import '~/styles/base.css'
 import '~/styles/common.css'
 
 // eslint-disable-next-line import/order
-import { ElSkeleton, ElSkeletonItem } from "element-plus";
+import { ElSkeleton, ElSkeletonItem } from 'element-plus'
 import 'element-plus/lib/theme-chalk/el-skeleton.css'
 import 'element-plus/lib/theme-chalk/el-skeleton-item.css'
 
@@ -28,6 +28,7 @@ window.$ = $
 const app = createApp(App)
 
 app.config.globalProperties.VITE_OSS_URL = import.meta.env.VITE_OSS_URL ?? ''
+window.VITE_OSS_URL = import.meta.env.VITE_OSS_URL ?? ''
 
 const routes = setupLayouts(generatedRoutes)
 const router = createRouter({
